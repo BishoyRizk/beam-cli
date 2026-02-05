@@ -60,3 +60,10 @@ if (cluster.isPrimary) {
     res.end(`Handled by worker ${process.pid}`);
   }).listen(PORT);
 }
+
+## Server Startup Flow
+
+Load environment variables
+Validate required variables (PORT)
+Initialize clustering (if enabled)
+Start the server on the specified port
